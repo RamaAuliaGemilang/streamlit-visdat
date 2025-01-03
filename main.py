@@ -220,7 +220,7 @@ with col_left:
             st.plotly_chart(nested_pie, use_container_width=True)
 
     with st.container():
-        st.subheader("Distribusi Material")
+        st.subheader("Frekuensi Material")
         material_data = filtered_data["Materials"].value_counts().reset_index()
         material_data.columns = ["Materials", "Count"]
         material_bar = px.bar(
