@@ -23,7 +23,7 @@ st.sidebar.header("Opsi Filter")
 
 # Filter Neighborhood
 neighborhood_options = data['Neighborhood'].unique().tolist()
-neighborhood_options.insert(0, "Semua")  # Menambahkan opsi "All" di awal
+neighborhood_options.insert(0, "Semua")  
 selected_neighborhood = st.sidebar.multiselect(
     "Pilih Neighborhood(s):", options=neighborhood_options, default="Semua")
 
@@ -259,4 +259,4 @@ with col_right:
 
 # Footer 
 st.write("\n")  
-st.write("© 2025 Kelompok 7 - Rama Aulia Gemilang, Muhammad Sultan Nurrochman, Rashad Izza Andredi")
+st.write("© 2025 Kelompok 7 - Rama Aulia Gemilang, Muhammad Sultan Nurrochman, dan Rashad Izza Andredi")
