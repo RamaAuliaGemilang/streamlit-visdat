@@ -110,8 +110,8 @@ def metric_card(title, value):
     st.write(
         f"""
         <div class='metric-card'>
-            <h4>{title}</h4>
-            <h2>{value}</h2>
+            <h5>{title}</h5>
+            <h3>{value}</h3>
         </div>
         """,
         unsafe_allow_html=True,
@@ -196,15 +196,11 @@ with col_left:
         with st.container():
             st.subheader("Distribusi Gaya Interior dan View")
             
-            # Data untuk gaya interior
             interior_data = filtered_data["Interior Style"].value_counts().reset_index()
             interior_data.columns = ["Interior Style", "Count"]
-            
-            # Data untuk view
             view_data = filtered_data["View"].value_counts().reset_index()
             view_data.columns = ["View", "Count"]
             
-            # Membuat nested donut chart
             nested_pie = px.sunburst(
                 data_frame=filtered_data,
                 path=["Interior Style", "View"],
